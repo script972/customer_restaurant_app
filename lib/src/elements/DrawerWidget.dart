@@ -80,7 +80,7 @@ class _DrawerWidgetState extends StateMVC<DrawerWidget> {
                     Navigator.of(context).pushNamed('/Pages', arguments: 3);
                   },
                   leading: Icon(
-                    Icons.fastfood,
+                    Icons.local_drink,
                     color: Theme.of(context).focusColor.withOpacity(1),
                   ),
                   title: Text(

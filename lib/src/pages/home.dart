@@ -58,7 +58,7 @@ class _HomeWidgetState extends StateMVC<HomeWidget> {
                 padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: SearchBarWidget(),
               ),
-              Padding(
+              /*Padding(
                 padding: const EdgeInsets.only(top: 15, left: 20, right: 20),
                 child: ListTile(
                   dense: true,
@@ -77,7 +77,7 @@ class _HomeWidgetState extends StateMVC<HomeWidget> {
                   ),
                 ),
               ),
-              CardsCarouselWidget(restaurantsList: _con.topRestaurants, heroTag: 'home_top_restaurants'),
+              CardsCarouselWidget(restaurantsList: _con.topRestaurants, heroTag: 'home_top_restaurants'),*/
               ListTile(
                 dense: true,
                 contentPadding: EdgeInsets.symmetric(horizontal: 20),
@@ -113,7 +113,7 @@ class _HomeWidgetState extends StateMVC<HomeWidget> {
               CategoriesCarouselWidget(
                 categories: _con.categories,
               ),
-              Padding(
+              /*Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: ListTile(
                   dense: true,
@@ -134,7 +134,7 @@ class _HomeWidgetState extends StateMVC<HomeWidget> {
                   restaurantsList: _con.topRestaurants,
                   heroTag: 'home_restaurants',
                 ),
-              ),
+              ),*/
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: ListTile(

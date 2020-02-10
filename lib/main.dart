@@ -6,6 +6,9 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:food_delivery_app/config/app_config.dart' as config;
 import 'package:food_delivery_app/generated/i18n.dart';
 import 'package:food_delivery_app/route_generator.dart';
+import 'package:food_delivery_app/route_generator.dart';
+import 'package:food_delivery_app/route_generator.dart';
+import 'package:food_delivery_app/route_generator.dart';
 import 'package:food_delivery_app/src/repository/settings_repository.dart' as settingRepo;
 import 'package:global_configuration/global_configuration.dart';
 

@@ -112,7 +112,7 @@ class _PagesTestWidgetState extends State<PagesTestWidget> {
                   child: new Icon(Icons.home, color: Theme.of(context).primaryColor),
                 )),
             BottomNavigationBarItem(
-              icon: new Icon(Icons.fastfood),
+              icon: new Icon(Icons.local_drink),
               title: new Container(height: 0.0),
             ),
             BottomNavigationBarItem(

@@ -56,10 +56,10 @@ class S implements WidgetsLocalizations {
   String get error_verify_email_settings => "Error! Verify email settings";
   String get extras => "Extras";
   String get faq => "Faq";
-  String get favorite_foods => "Favorite Foods";
+  String get favorite_foods => "Favorite";
   String get favorites => "Favorites";
-  String get featured_foods => "Featured Foods";
-  String get food_categories => "Food Categories";
+  String get featured_foods => "Featured";
+  String get food_categories => "Categories";
   String get full_address => "Full Address";
   String get full_name => "Full name";
   String get g => "g";
@@ -131,7 +131,7 @@ class S implements WidgetsLocalizations {
   String get reviews => "Reviews";
   String get save => "Save";
   String get search => "Search";
-  String get search_for_restaurants_or_foods => "Search for restaurants or foods";
+  String get search_for_restaurants_or_foods => "Search";
   String get select_extras_to_add_them_on_the_food => "Select extras to add them on the food";
   String get select_your_preferred_languages => "Select your preferred languages";
   String get select_your_preferred_payment_mode => "Select your preferred payment mode";
@@ -1028,7 +1028,7 @@ class $pt extends S {
   @override
   String get send_password_reset_link => "Send password reset link";
   @override
-  String get favorite_foods => "Alimentos favoritos";
+  String get favorite_foods => "Favoritos";
   @override
   String get not_a_valid_address => "Endereço inválido";
   @override
@@ -1107,7 +1107,7 @@ class $in extends S {
   @override
   String get your_reset_link_has_been_sent_to_your_email => "Your reset link has been sent to your email";
   @override
-  String get search_for_restaurants_or_foods => "Search for restaurants or foods";
+  String get search_for_restaurants_or_foods => "Search";
   @override
   String get password => "Password";
   @override
@@ -1415,7 +1415,7 @@ class $fr extends S {
   @override
   String get your_reset_link_has_been_sent_to_your_email => "Your reset link has been sent to your email";
   @override
-  String get search_for_restaurants_or_foods => "Rechercher des restaurants ou des aliments";
+  String get search_for_restaurants_or_foods => "Rechercher";
   @override
   String get password => "Mot de passe";
   @override
@@ -1718,7 +1718,7 @@ class $es extends S {
   @override
   String get your_reset_link_has_been_sent_to_your_email => "Your reset link has been sent to your email";
   @override
-  String get search_for_restaurants_or_foods => "Busca restaurantes o comidas";
+  String get search_for_restaurants_or_foods => "Busca";
   @override
   String get password => "Contraseña";
   @override
