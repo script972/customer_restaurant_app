@@ -11,7 +11,7 @@ description: customer
 # In iOS, build-name is used as CFBundleShortVersionString while build-number used as CFBundleVersion.
 # Read more about iOS versioning at
 # https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
-version: 1.7.0
+version: 1.7.1
 
 environment:
   sdk: ">=2.1.0 <3.0.0"
@@ -33,7 +33,7 @@ dependencies:
   http: ^0.12.0+2
   intl: ^0.16.0
   html: ^0.14.0+2
-  shared_preferences: ^0.5.6
+  shared_preferences: 0.5.6+1
   flutter_html: ^0.10.4
   flutter_svg: ^0.14.2
   location: ^2.3.5
@@ -84,6 +84,7 @@ flutter:
     - assets/img/cash.png
     - assets/img/pay_pickup.png
     - assets/img/loading.gif
+    - assets/img/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

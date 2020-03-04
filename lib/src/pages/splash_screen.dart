@@ -55,11 +55,12 @@ class SplashScreenState extends StateMVC<SplashScreen> {
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Icon(
+              /*Icon(
                 Icons.restaurant_menu,
                 size: 90,
                 color: Theme.of(context).scaffoldBackgroundColor,
-              ),
+              ),*/
+              Image.asset("assets/img/logo_image.png"),
               Text(
                 S.of(context).multirestaurants,
                 style: Theme.of(context)
