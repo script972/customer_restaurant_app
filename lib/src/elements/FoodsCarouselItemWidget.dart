@@ -9,7 +9,8 @@ class FoodsCarouselItemWidget extends StatelessWidget {
   Food food;
   String heroTag;
 
-  FoodsCarouselItemWidget({Key key, this.heroTag, this.marginLeft, this.food}) : super(key: key);
+  FoodsCarouselItemWidget({Key key, this.heroTag, this.marginLeft, this.food})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +18,8 @@ class FoodsCarouselItemWidget extends StatelessWidget {
       splashColor: Theme.of(context).accentColor.withOpacity(0.08),
       highlightColor: Colors.transparent,
       onTap: () {
-        Navigator.of(context).pushNamed('/Food', arguments: RouteArgument(id: food.id, heroTag: heroTag));
+        Navigator.of(context).pushNamed('/Food',
+            arguments: RouteArgument(id: food.id, heroTag: heroTag));
       },
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -33,15 +35,18 @@ class FoodsCarouselItemWidget extends StatelessWidget {
                   height: 130,
                   child: ClipRRect(
                     borderRadius: BorderRadius.all(Radius.circular(5)),
-                    child: CachedNetworkImage(
-                      fit: BoxFit.cover,
-                      imageUrl: food.image.thumb,
-                      placeholder: (context, url) => Image.asset(
-                        'assets/img/loading.gif',
-                        fit: BoxFit.cover,
-                      ),
-                      errorWidget: (context, url, error) => Icon(Icons.error),
-                    ),
+                    child: food?.image?.thumb == null
+                        ? Image.asset("assets/img/ic_placeholder.png")
+                        : CachedNetworkImage(
+                            fit: BoxFit.cover,
+                            imageUrl: food.image.thumb,
+                            placeholder: (context, url) => Image.asset(
+                              'assets/img/loading.gif',
+                              fit: BoxFit.cover,
+                            ),
+                            errorWidget: (context, url, error) =>
+                                Icon(Icons.error),
+                          ),
                   ),
                 ),
               ),
@@ -49,11 +54,15 @@ class FoodsCarouselItemWidget extends StatelessWidget {
                 margin: EdgeInsets.only(right: 25, top: 5),
                 padding: EdgeInsets.symmetric(horizontal: 10, vertical: 3),
                 decoration: BoxDecoration(
-                    borderRadius: BorderRadius.all(Radius.circular(100)), color: Theme.of(context).accentColor),
+                    borderRadius: BorderRadius.all(Radius.circular(100)),
+                    color: Theme.of(context).accentColor),
                 alignment: AlignmentDirectional.topEnd,
                 child: Helper.getPrice(
                   food.price,
-                  style: Theme.of(context).textTheme.body2.merge(TextStyle(color: Theme.of(context).primaryColor)),
+                  style: Theme.of(context)
+                      .textTheme
+                      .body2
+                      .merge(TextStyle(color: Theme.of(context).primaryColor)),
                 ),
               ),
             ],

@@ -33,8 +33,9 @@ class Food {
     weight = jsonMap['weight'].toString();
     featured = jsonMap['featured'] ?? false;
     restaurant = jsonMap['restaurant'] != null ? Restaurant.fromJSON(jsonMap['restaurant']) : null;
+    //category = ((jsonMap['category'] != null && (jsonMap['cetegory'] as List).length>0)) ? Category.fromJSON(jsonMap['category']) : null;
     category = jsonMap['category'] != null ? Category.fromJSON(jsonMap['category']) : null;
-    image = jsonMap['media'] != null ? Media.fromJSON(jsonMap['media'][0]) : null;
+    image = ((jsonMap['media'] != null && (jsonMap['media'] as List).length>0)) ? Media.fromJSON(jsonMap['media'][0]) : null;
     extras = jsonMap['extras'] != null
         ? List.from(jsonMap['extras']).map((element) => Extra.fromJSON(element)).toList()
         : null;

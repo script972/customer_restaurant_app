@@ -71,7 +71,7 @@ class ProfileAvatarWidget extends StatelessWidget {
             style: Theme.of(context).textTheme.headline.merge(TextStyle(color: Theme.of(context).primaryColor)),
           ),
           Text(
-            user.address,
+            user?.address ?? "",
             style: Theme.of(context).textTheme.caption.merge(TextStyle(color: Theme.of(context).primaryColor)),
           ),
         ],

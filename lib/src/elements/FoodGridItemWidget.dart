@@ -26,7 +26,7 @@ class FoodGridItemWidget extends StatelessWidget {
                   tag: heroTag + food.id,
                   child: Container(
                     decoration: BoxDecoration(
-                      image: DecorationImage(image: NetworkImage(this.food.image.thumb), fit: BoxFit.cover),
+                      image: DecorationImage(image: this.food?.image?.thumb ?? null ==null ? AssetImage("assets/img/ic_placeholder.png") : NetworkImage(this.food.image.thumb), fit: BoxFit.cover),
                       borderRadius: BorderRadius.circular(5),
                     ),
                   ),

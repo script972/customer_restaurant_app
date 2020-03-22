@@ -116,6 +116,9 @@ class FoodController extends ControllerMVC {
   }
 
   void calculateTotal() {
+    if (food == null) {
+      return;
+    }
     total = food.price ?? 0;
     food.extras.forEach((extra) {
       total += extra.checked ? extra.price : 0;
