@@ -56,7 +56,7 @@ class _PaymentMethodsWidgetState extends State<PaymentMethodsWidget> {
           mainAxisAlignment: MainAxisAlignment.start,
           mainAxisSize: MainAxisSize.max,
           children: <Widget>[
-            Padding(
+           /* Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: SearchBarWidget(),
             ),
@@ -82,8 +82,8 @@ class _PaymentMethodsWidgetState extends State<PaymentMethodsWidget> {
                 : SizedBox(
                     height: 0,
                   ),
-            SizedBox(height: 10),
-            ListView.separated(
+            SizedBox(height: 10),*/
+           /* ListView.separated(
               scrollDirection: Axis.vertical,
               shrinkWrap: true,
               primary: false,
@@ -94,7 +94,7 @@ class _PaymentMethodsWidgetState extends State<PaymentMethodsWidget> {
               itemBuilder: (context, index) {
                 return PaymentMethodListItemWidget(paymentMethod: list.paymentsList.elementAt(index));
               },
-            ),
+            ),*/
             list.cashList.length > 0
                 ? Padding(
                     padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
