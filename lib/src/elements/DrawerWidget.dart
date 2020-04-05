@@ -36,16 +36,18 @@ class _DrawerWidgetState extends StateMVC<DrawerWidget> {
 //              borderRadius: BorderRadius.only(bottomLeft: Radius.circular(35)),
                     ),
                     accountName: Text(
-                      _con.user.name,
+                      _con.user?.name?? "",
                       style: Theme.of(context).textTheme.title,
                     ),
                     accountEmail: Text(
-                      _con.user.email,
+                      _con.user?.email ?? "",
                       style: Theme.of(context).textTheme.caption,
                     ),
                     currentAccountPicture: CircleAvatar(
                       backgroundColor: Theme.of(context).accentColor,
-                      backgroundImage: NetworkImage(_con.user.image.thumb),
+                      backgroundImage: _con.user?.image?.thumb == null
+                          ? AssetImage("assets/img/ic_placeholder.png")
+                          : NetworkImage(_con.user.image.thumb),
                     ),
                   ),
                 ),
@@ -175,7 +177,8 @@ class _DrawerWidgetState extends StateMVC<DrawerWidget> {
                 ListTile(
                   onTap: () {
                     logout().then((value) {
-                      Navigator.of(context).pushNamedAndRemoveUntil('/Login', (Route<dynamic> route) => false);
+                      Navigator.of(context).pushNamedAndRemoveUntil(
+                          '/Login', (Route<dynamic> route) => false);
                     });
                   },
                   leading: Icon(

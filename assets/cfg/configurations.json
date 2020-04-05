@@ -1,5 +1,5 @@
 {
-  "base_url": "https://buvape.com/",
-  "api_base_url": "https://buvape.com/api/",
+  "base_url": "http://139.59.85.136/",
+  "api_base_url": "http://139.59.85.136/api/",
   "google_maps_key" : "AIzaSyAT07iMlfZ9bJt1gmGj9KhJDLFY8srI6dA"
 }

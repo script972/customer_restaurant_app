@@ -15,11 +15,13 @@ class Restaurant {
   double distance;
 
   Restaurant();
-
+//    restaurant = jsonMap['restaurant'] != null ? Restaurant.fromJSON(jsonMap['restaurant']) : null;
   Restaurant.fromJSON(Map<String, dynamic> jsonMap)
       : id = jsonMap['id'].toString(),
         name = jsonMap['name'],
         image = jsonMap['media'] != null ? Media.fromJSON(jsonMap['media'][0]) : null,
+
+
         rate = jsonMap['rate'] ?? '0',
         address = jsonMap['address'],
         description = jsonMap['description'],
