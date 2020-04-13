@@ -62,7 +62,7 @@ class SplashScreenState extends StateMVC<SplashScreen> {
               ),*/
               Image.asset("assets/img/logo_image.png"),
               Text(
-                S.of(context).multirestaurants,
+                "Instadrink",
                 style: Theme.of(context)
                     .textTheme
                     .display1

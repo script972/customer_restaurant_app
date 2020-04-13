@@ -16,13 +16,19 @@ class Media {
     id = jsonMap['id']?.toString() ?? -1;
 
     name = jsonMap['name'];
-    if (jsonMap['thumb'] == null) {
+    if (jsonMap['thumb'] != null) {
       thumb = jsonMap['thumb'];
     }
-    if (jsonMap['url'] == null) {
+    if (jsonMap['url'] != null) {
       url = jsonMap['url'];
     }
     icon = jsonMap['icon'];
+
+    if(thumb==null && icon!=null){
+      thumb = icon;
+    } else if(icon==null && thumb!=null){
+      icon = thumb;
+    }
     size = jsonMap['formated_size'];
   }
 }

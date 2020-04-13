@@ -86,7 +86,7 @@ class MyApp extends StatelessWidget {
               builder: (context, Locale value, _) {
                 print(value);
                 return MaterialApp(
-                  title: 'Flutter Multi-Restaurants',
+                  title: 'Instadrink',
                   initialRoute: '/Splash',
                   onGenerateRoute: RouteGenerator.generateRoute,
                   debugShowCheckedModeBanner: false,
