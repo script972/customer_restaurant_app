@@ -16,7 +16,11 @@ class Category {
     if (jsonMap['media'] != null && (jsonMap['media'] as List).length > 0) {
       /// media = new List<Null>();
       jsonMap['media'].forEach((v) {
-        image = v;
+        if (v['thumb'] != null) {
+          image = v['thumb'];
+        } else if (v['url'] != null) {
+          image = v['url'];
+        }
       });
     } else {
       image = "";

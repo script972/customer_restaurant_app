@@ -16,21 +16,20 @@ class Restaurant {
 
   Restaurant();
 //    restaurant = jsonMap['restaurant'] != null ? Restaurant.fromJSON(jsonMap['restaurant']) : null;
-  Restaurant.fromJSON(Map<String, dynamic> jsonMap)
-      : id = jsonMap['id'].toString(),
-        name = jsonMap['name'],
-        image = jsonMap['media'] != null ? Media.fromJSON(jsonMap['media'][0]) : null,
-
-
-        rate = jsonMap['rate'] ?? '0',
-        address = jsonMap['address'],
-        description = jsonMap['description'],
-        phone = jsonMap['phone'],
-        mobile = jsonMap['mobile'],
-        information = jsonMap['information'],
-        latitude = jsonMap['latitude'],
-        longitude = jsonMap['longitude'],
-        distance = jsonMap['distance'] != null ? double.parse(jsonMap['distance'].toString()) : 0.0;
+  Restaurant.fromJSON(Map<String, dynamic> jsonMap){
+    id = jsonMap['id'].toString();
+    name = jsonMap['name'];
+    image = ((jsonMap['media'] != null && (jsonMap['media'] as List).length>0)) ? Media.fromJSON(jsonMap['media'][0]) : null;
+    rate = jsonMap['rate'] ?? '0';
+    address = jsonMap['address'];
+    description = jsonMap['description'];
+    phone = jsonMap['phone'];
+    mobile = jsonMap['mobile'];
+    information = jsonMap['information'];
+    latitude = jsonMap['latitude'];
+    longitude = jsonMap['longitude'];
+    distance = jsonMap['distance'] != null ? double.parse(jsonMap['distance'].toString()) : 0.0;
+  }
 
   Map<String, dynamic> toMap() {
     return {

@@ -101,7 +101,7 @@ class _FoodWidgetState extends StateMVC<FoodWidget> {
                                             CrossAxisAlignment.start,
                                         children: <Widget>[
                                           Text(
-                                            _con.food.name,
+                                            _con.food.name ?? "",
                                             overflow: TextOverflow.ellipsis,
                                             maxLines: 2,
                                             style: Theme.of(context)

@@ -27,14 +27,11 @@ class CategoriesCarouselItemWidget extends StatelessWidget {
               width: 100,
               height: 100,
               decoration: BoxDecoration(
-                  borderRadius: BorderRadius.all(Radius.circular(5)), color: Theme.of(context).accentColor),
-              child: Padding(
-                padding: const EdgeInsets.all(20),
-                child: category.image != "" ? SvgPicture.network(
-                  category.image,
-                  color: Theme.of(context).scaffoldBackgroundColor,
-                ) : Image.asset("assets/img/ic_placeholder.png", height: 100, width: 100.0,),
-              ),
+                  borderRadius: BorderRadius.all(Radius.circular(5))/*, color: Theme.of(context).accentColor*/),
+              child: category.image != "" ? Image.network(
+                category.image,
+                //color: Theme.of(context).scaffoldBackgroundColor,
+              ) : Image.asset("assets/img/ic_placeholder.png", height: 100, width: 100.0,),
             ),
           ),
           SizedBox(height: 5),
